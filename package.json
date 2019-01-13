@@ -1,12 +1,32 @@
 {
   "name": "vue-circle-counter",
   "version": "1.0.0",
-  "private": true,
+  "description": "Vue compoment to create a circular counter or progress bar in SVG",
+  "author": {
+    "name": "Roy Prins",
+    "email": "prinsroy@gmail.com"
+  },
+  "repository": "https://github.com/snirp/vue-circle-counter",
+  "bugs": "https://github.com/snirp/vue-circle-counter/issues",
+  "keywords": [
+    "vue",
+    "circle",
+    "counter",
+    "svg",
+    "progress bar"
+  ],
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:npm": "vue-cli-service build --target lib --name circleCounter ./src/CircleCounter.vue"
   },
+  "main": "dist/circleCounter.umd.js",
+  "unpkg": "dist/circleCounter.umd.min.js",
   "dependencies": {
     "vue": "^2.5.21"
   },
