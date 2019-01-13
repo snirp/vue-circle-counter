@@ -30,19 +30,19 @@ export default {
   props: {
     dashCount: {
       type: Number,
-      default: 70
+      default: 60
     },
     activeCount: {
       type: Number,
-      default: 5
+      default: 10
     },
     strokeWidth: {
       type: Number, 
-      default: 10
+      default: 20
     },
     activeWidth: {
       type: Number, 
-      default: 10
+      default: 20
     },
     stroke: {
       type: String, 
@@ -54,11 +54,11 @@ export default {
     },
     dashSpacing: {
       type: Number,
-      default: 0.5
+      default: 1/4
     },
     rotate: {
       type: Number,
-      default: -160
+      default: -90
     },
     reverse: {
       type: Boolean,
@@ -96,7 +96,7 @@ export default {
 
     // Radius of the circle arc
     getRadius(){
-      return this.UNITS/2 - Math.max(this.getStrokeWidth(this.strokeWidth), this.getStrokeWidth(this.activeWidth))
+      return (this.UNITS-Math.max(this.getStrokeWidth(this.strokeWidth), this.getStrokeWidth(this.activeWidth)))/2
     },
 
     // SVG path definition requires points in cartesian space
@@ -108,7 +108,7 @@ export default {
       };
     },
 
-    // Path definition for circular arc, clockwise when endDegrees
+    // Path definition for circular arc
     describeArc(cx, cy, radius, startDegrees, endDegrees){
       const start = this.polarToCartesian(cx, cy, radius, startDegrees);
       const end = this.polarToCartesian(cx, cy, radius, endDegrees);
