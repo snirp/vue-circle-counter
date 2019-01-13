@@ -1,4 +1,4 @@
-# VUE ARC COUNTER
+# VUE CIRCLE COUNTER
 
 This Vue component creates a circular counter. The angle, colors, strokewidth, spacing between dashes and 
 direction can all be controlled through properties.
