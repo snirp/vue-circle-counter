@@ -1,5 +1,9 @@
 <template>
-  <svg :viewBox="`0 0 ${UNITS} ${UNITS}`" height="100%" width="100%">
+  <svg 
+    :viewBox="`0 0 ${UNITS} ${UNITS}`" 
+    :height="size || '100%'" 
+    :width="size || '100%'" 
+  >
     <g :transform="`rotate(${rotate},${UNITS/2},${UNITS/2}) ${reverse ? 'scale(1,-1) translate(0, -' + UNITS +')' : ''}`">
       <circle 
         :cx="UNITS/2" 
@@ -18,6 +22,7 @@
         :stroke-dasharray="getLengths()"
       />
     </g>
+    <text fill="currentColor" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" >{{text}}</text>
   </svg>
 </template>
 
@@ -25,9 +30,17 @@
 export default {
   beforeCreate() {
     // Arbitrary dimensions of SVG to set up user-space units
-    this.UNITS = 32;
+    this.UNITS = 200;
   },
   props: {
+    size: {
+      type: String,
+      default: ''
+    },
+    text: {
+      type: String,
+      default: ''      
+    },
     dashCount: {
       type: Number,
       default: 60

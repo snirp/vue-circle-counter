@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <circle-counter width="20rem" height="20rem"/>
+    <circle-counter width="20rem" height="20rem" text="label"/>
   </div>
 </template>
 

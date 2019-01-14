@@ -36,6 +36,7 @@ angle (default is right / 3 o'clock).
 ## Properties
 |prop|description|default|options|
 |:---|---|---|---|
+|`size`|width and height of element|`10rem`|String|
 |`dashCount`|Total number of dashes|`60`|Natural number|
 |`activeCount`|Number of dashes on top|`10`|Natural number|
 |`strokeWidth`|Bottom stroke as a percentage of the radius|`20`|`0` to `100`|
@@ -45,6 +46,7 @@ angle (default is right / 3 o'clock).
 |`dashSpacing`|Fraction of width taken up by space between dashes|`1/4`|`0` to `1`|
 |`rotate`|Degrees rotation for start angle (0 = right)|`-90`|`-360` to `360`|
 |`reverse`|Reverse the direction of counting (true = counter-clockwise)|`false`|`false` or `true`|
+|`text`|Text string to display inside SVG|`""`|String|
 
 ## License
 
