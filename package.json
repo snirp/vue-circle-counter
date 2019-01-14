@@ -1,6 +1,6 @@
 {
   "name": "vue-circle-counter",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Vue compoment to create a circular counter or progress bar in SVG",
   "author": {
     "name": "Roy Prins",
