@@ -22,7 +22,9 @@
         :stroke-dasharray="getLengths()"
       />
     </g>
+    <text fill="currentColor" x="50%" y="50%" dy="-{{textSpacing}} text-anchor="middle" dominant-baseline="middle" >{{superText}}</text>
     <text fill="currentColor" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" >{{text}}</text>
+    <text fill="currentColor" x="50%" y="50%" dy="{{textSpacing}} text-anchor="middle" dominant-baseline="middle" >{{subText}}</text>
   </svg>
 </template>
 
@@ -37,9 +39,21 @@ export default {
       type: String,
       default: ''
     },
+    superText: {
+      type: String,
+      default: ''      
+    },
     text: {
       type: String,
       default: ''      
+    },
+    subText: {
+      type: String,
+      default: ''      
+    },
+    textSpacing: {
+      type: String,
+      default: '1.5rem'      
     },
     dashCount: {
       type: Number,
