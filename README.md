@@ -46,7 +46,10 @@ angle (default is right / 3 o'clock).
 |`dashSpacing`|Fraction of width taken up by space between dashes|`1/4`|`0` to `1`|
 |`rotate`|Degrees rotation for start angle (0 = right)|`-90`|`-360` to `360`|
 |`reverse`|Reverse the direction of counting (true = counter-clockwise)|`false`|`false` or `true`|
+|`superText`|Text string to display inside SVG above the central text|`""`|String|
 |`text`|Text string to display inside SVG|`""`|String|
+|`subText`|Text string to display inside SVG below the central text|`""`|String|
+|`textSpacing`|value to determine spacing of text lines in the SVG|`"1.5rem"`|String|
 
 ## License
 
